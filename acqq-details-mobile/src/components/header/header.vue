@@ -34,12 +34,13 @@
   </section>
 </template>
 
-<script type="text/ecmascript-6">
+<script>
     import $ from 'n-zepto'   // 如此方式引用zepto，控制台工程内安装，cmd同步加载模式
     console.log($)      // 打印zepto，看看是否引用成功
 
     export default {
     	props:{
+            // 获取从父组件传递给子组件的数据，进行解析加载，type是声明获取的是Object对象，其它的可以看api 
     		head:{
     			 type:Object
     		}

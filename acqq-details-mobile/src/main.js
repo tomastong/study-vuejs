@@ -16,6 +16,7 @@ Vue.use(VueResource);
 let app = Vue.extend(App);
 
 let router = new VueRouter({
+  // 主要是这里控制选项卡active的名字，标签里面的没用
   linkActiveClass:'active' //改变v-link点击后默认v-link-active的类名
 });
 

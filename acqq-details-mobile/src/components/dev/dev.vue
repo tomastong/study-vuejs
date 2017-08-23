@@ -39,6 +39,7 @@
 <script>
 export default {
 	props:{
+		// 这里获取从父组件传递给子组件的数据，进行解析加载，type是声明获取的是Object对象，其它的可以看api 
 		head:{
 			type:Object
 		}
@@ -48,7 +49,8 @@ export default {
 			dev:{}
 		}
 	},
-	created(){
+	created(){	// 这里是生命周期函数，组件实例创建完成，属性已经绑定，dom未生成，$el不存在
+				// 主要这里用来填充数据，并不执行挂载
 		this.$http.get('/api/dev').then((response)=>{
                 response = response.body;
                 if(response.errno==0){

@@ -1,5 +1,6 @@
 <template>
   <div>
+  <!--这里是向子组件传递父组件的head数据，子组件显示props声明属性-->
       <v-header :head="head">
 
       </v-header>
@@ -10,6 +11,7 @@
             <a class="tab-list-item" v-link="{path:'/tall'}">评论</a>
         </div>
      </section>
+     <!--这里是向子组件传递父组件的head数据，子组件显示props声明属性-->
      <router-view :head="head"></router-view>
   </div>
 </template>
